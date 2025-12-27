@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Simulando os dados que virão do arquivo produtos.json
 const produtos = [
   { id: 1, nome: "Produto Exemplo", preco: "R$ 0,00", link: "#", imagem: "https://via.placeholder.com/300" }
 ];
