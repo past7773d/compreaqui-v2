@@ -3,13 +3,13 @@ const path = require('path');
 const AFID = 'p20250725122731';
 
 async function run() {
-    console.log('🛡️ Segurança: Rodando Build Patched (15.1.5)');
+    console.log('🛡️ Segurança: Build 15.1.5 | Minerando Ofertas...');
     const dir = path.join(process.cwd(), 'src/data');
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
     try {
-        // Busca ampla por 'oferta' para garantir que nunca venha 0
-        const res = await fetch('https://api.mercadolibre.com/sites/MLB/search?q=celular&limit=12', {
+        // Busca genérica para garantir resultados e lucros
+        const res = await fetch('https://api.mercadolibre.com/sites/MLB/search?q=smartphone&limit=12', {
             headers: { 'User-Agent': 'Mozilla/5.0' }
         });
         const data = await res.json();
@@ -23,9 +23,9 @@ async function run() {
         }));
 
         fs.writeFileSync(path.join(dir, 'produtos.json'), JSON.stringify(p, null, 2));
-        console.log(`✅ Sucesso: ${p.length} produtos minerados.`);
+        console.log(`✅ Sucesso: ${p.length} produtos injetados.`);
     } catch (e) {
-        console.log('⚠️ Erro no build:', e.message);
+        console.log('⚠️ Erro na mineração:', e.message);
         fs.writeFileSync(path.join(dir, 'produtos.json'), '[]');
     }
 }
