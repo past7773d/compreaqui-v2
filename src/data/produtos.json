@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "nome": "iPhone 15 Apple (128 GB) - Azul",
+    "preco": "R$ 4.899,00",
+    "link": "https://www.mercadolivre.com.br/sec/ads/v2/link?murl=https%3A%2F%2Fwww.mercadolivre.com.br%2Fapple-iphone-15-128-gb-azul%2Fp%2FMLB27380121&afid=p20250725122731",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_824101-MLA71782871153_092023-O.webp"
+  },
+  {
+    "nome": "iPhone 13 Apple (128 GB) - Meia-noite",
+    "preco": "R$ 3.499,00",
+    "link": "https://www.mercadolivre.com.br/sec/ads/v2/link?murl=https%3A%2F%2Fwww.mercadolivre.com.br%2Fapple-iphone-13-128-gb-meia-noite%2Fp%2FMLB18500854&afid=p20250725122731",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612261-MLA47779242330_102021-O.webp"
+  },
+  {
+    "nome": "Samsung Galaxy S24 Ultra 256GB",
+    "preco": "R$ 6.299,00",
+    "link": "https://www.mercadolivre.com.br/sec/ads/v2/link?murl=https%3A%2F%2Fwww.mercadolivre.com.br%2Fsamsung-galaxy-s24-ultra-5g-256gb-titanium%2Fp%2FMLB31245678&afid=p20250725122731",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_627092-MLU74102910403_012024-O.webp"
+  },
+  {
+    "nome": "Apple AirPods Pro (2ª geração)",
+    "preco": "R$ 1.899,00",
+    "link": "https://www.mercadolivre.com.br/sec/ads/v2/link?murl=https%3A%2F%2Fwww.mercadolivre.com.br%2Fairpods-pro-2-geracao%2Fp%2FMLB12345678&afid=p20250725122731",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_656209-MLA51515234193_092022-O.webp"
+  }
+]
