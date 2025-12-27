@@ -8,13 +8,14 @@ async function run() {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
     try {
-        // Adicionado User-Agent para evitar bloqueio 403/Empty
-        const res = await fetch('https://api.mercadolibre.com/sites/MLB/search?q=smartphone&limit=12', {
-            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' }
+        // Busca ampla por 'oferta' para garantir que nunca venha 0
+        const res = await fetch('https://api.mercadolibre.com/sites/MLB/search?q=celular&limit=12', {
+            headers: { 'User-Agent': 'Mozilla/5.0' }
         });
         const data = await res.json();
         
-        const p = (data.results || []).map(i => ({
+        const results = data.results || [];
+        const p = results.map(i => ({
             nome: i.title.substring(0, 45),
             preco: new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(i.price),
             link: `https://www.mercadolivre.com.br/sec/ads/v2/link?murl=${encodeURIComponent(i.permalink)}&afid=${AFID}`,
